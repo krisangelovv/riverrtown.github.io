@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riverr Town Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            max-width: 1200px;
+            margin: 60px auto 0;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ffe070;
+            text-shadow: 0 0 16px rgba(255, 215, 0, 0.25);
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #d8c98b;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #111;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.6);
+        }
+
+        .features {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #ffe070;
+            text-shadow: 0 0 14px rgba(255, 215, 0, 0.22);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: #121212;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #ffd700;
+            border-left: 1px solid rgba(255, 215, 0, 0.2);
+            border-right: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .feature-card h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .feature-card p {
+            color: #d0c08a;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Riverr Town Studio logo">
+                <span>Riverr Town Studio</span>
+            </div>
+            <ul>
+                <li><a href="index.html" data-i18n="nav_home">Начало</a></li>
+                <li><a href="index.html#services" data-i18n="nav_services">Услуги</a></li>
+                <li><a href="portfolio.html" data-i18n="nav_portfolio">Портфолио</a></li>
+                <li><a href="contacts.html" data-i18n="nav_contact">Контакти</a></li>
+                <li class="language-switch" aria-label="Избор на език / Language selection">
+                    <button class="lang-btn active" data-lang="bg" type="button">🇧🇬 BG</button>
+                    <button class="lang-btn" data-lang="en" type="button">🇬🇧 EN</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1 data-i18n="hero_title">Добре дошли в Riverr Town Studio</h1>
+        <p data-i18n="hero_subtitle">Всяка идея заслужава да бъде реализирана!</p>
+        <a class="cta-button" data-i18n="hero_cta" href="shop.html">Започнете сега</a>
+    </section>
+
+    <section class="features" id="services">
+        <h2 data-i18n="services_title">Нашите услуги</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3 data-i18n="feature_1_title">Готови инструментали в различни стилове</h3>
+                <p data-i18n="feature_1_text">Предлагаме разнообразие от готови инструментали, подходящи за различни музикални стилове и проекти.</p>
+            </div>
+            <div class="feature-card">
+                <h3 data-i18n="feature_2_title">Смесване и мастериране</h3>
+                <p data-i18n="feature_2_text">Предлагаме професионално смесване и мастериране на вашите музикални проекти, за да звучат перфектно навсякъде.</p>
+            </div>
+            <div class="feature-card">
+                <h3 data-i18n="feature_3_title">Запис и продукция</h3>
+                <p data-i18n="feature_3_text">От запис до продукция, ние превръщаме вашата музикална визия в реалност.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p data-i18n="footer_text">&copy; 2024 Riverr Town Studio. Всички права запазени.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            bg: {
+                nav_home: "Начало",
+                nav_services: "Услуги",
+                nav_portfolio: "Портфолио",
+                nav_contact: "Контакти",
+                hero_title: "Добре дошли в Riverr Town Studio",
+                hero_subtitle: "Всяка идея заслужава да бъде реализирана!",
+                hero_cta: "Започнете сега",
+                services_title: "Нашите услуги",
+                feature_1_title: "Готови инструментали в различни стилове",
+                feature_1_text: "Предлагаме разнообразие от готови инструментали, подходящи за различни музикални стилове и проекти.",
+                feature_2_title: "Смесване и мастериране",
+                feature_2_text: "Предлагаме професионално смесване и мастериране на вашите музикални проекти, за да звучат перфектно навсякъде.",
+                feature_3_title: "Запис и продукция",
+                feature_3_text: "От запис до продукция, ние превръщаме вашата музикална визия в реалност.",
+                footer_text: "&copy; 2024 Riverr Town Studio. Всички права запазени.",
+                page_title: "Riverr Town Studio"
+            },
+            en: {
+                nav_home: "Home",
+                nav_services: "Services",
+                nav_portfolio: "Portfolio",
+                nav_contact: "Contact",
+                hero_title: "Welcome to Riverr Town Studio",
+                hero_subtitle: "Every idea deserves to be brought to life!",
+                hero_cta: "Get Started",
+                services_title: "Our Services",
+                feature_1_title: "Ready-Made Instrumentals in Various Styles",
+                feature_1_text: "We offer a diverse range of ready-made instrumentals suitable for different music genres and creative projects.",
+                feature_2_title: "Mixing and Mastering",
+                feature_2_text: "We provide professional mixing and mastering for your music projects, so they sound perfect everywhere.",
+                feature_3_title: "Recording and Production",
+                feature_3_text: "From recording to production, we turn your musical vision into reality.",
+                footer_text: "&copy; 2024 Riverr Town Studio. All rights reserved.",
+                page_title: "Riverr Town Studio"
+            }
+        };
+
+        const languageButtons = document.querySelectorAll('.lang-btn');
+        const translatableElements = document.querySelectorAll('[data-i18n]');
+
+        function setLanguage(lang) {
+            const selectedLanguage = translations[lang] ? lang : 'bg';
+
+            translatableElements.forEach((element) => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[selectedLanguage][key]) {
+                    element.innerHTML = translations[selectedLanguage][key];
+                }
+            });
+
+            document.documentElement.lang = selectedLanguage;
+            document.title = translations[selectedLanguage].page_title;
+            localStorage.setItem('riverrtown-language', selectedLanguage);
+
+            languageButtons.forEach((button) => {
+                button.classList.toggle('active', button.dataset.lang === selectedLanguage);
+            });
+        }
+
+        languageButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                setLanguage(button.dataset.lang);
+            });
+        });
+
+        setLanguage(localStorage.getItem('riverrtown-language') || 'bg');
+    </script>
+</body>
+</html>

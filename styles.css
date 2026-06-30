@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #1a1a1a 0%, #080808 55%, #000000 100%);
+    color: #f4d44d;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(135deg, #0e0e0e 0%, #171717 100%);
+    padding: 20px 0;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.35);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffd84d;
+    text-shadow: 0 0 14px rgba(255, 215, 0, 0.25);
+}
+
+.logo img {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 215, 0, 0.45);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.logo span {
+    line-height: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffd84d;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff3a6;
+}
+
+.language-switch {
+    display: flex;
+    gap: 8px;
+}
+
+.lang-btn {
+    border: 1px solid rgba(255, 215, 0, 0.45);
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffd84d;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.lang-btn:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 215, 0, 0.2);
+}
+
+.lang-btn.active {
+    background: #ffd700;
+    color: #111;
+    border-color: #ffd700;
+}
+
+footer {
+    background: linear-gradient(135deg, #0c0c0c 0%, #141414 100%);
+    color: #ffd700;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.45);
+    border-top: 1px solid rgba(255, 215, 0, 0.35);
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul {
+        gap: 16px;
+    }
+}
